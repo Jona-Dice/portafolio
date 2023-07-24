@@ -1,42 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+    /* SVG Animation */
 
-.animate__animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-duration: var(--animate-duration);
-    animation-duration: var(--animate-duration);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
+    svg path,
+    svg rect {
+        fill: black;
+    }
+    /* Animaciones */
 
-@media (prefers-reduced-motion) {
-    .animated {
-        -webkit-animation: none!important;
-        animation: unset !important;
-        -webkit-transition: none !important;
-        transition: none !important;
+    .animate__animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: var(--animate-duration);
+        animation-duration: var(--animate-duration);
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
     }
-}
 
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
+    @media (prefers-reduced-motion) {
+        .animated {
+            -webkit-animation: none!important;
+            animation: unset !important;
+            -webkit-transition: none !important;
+            transition: none !important;
+        }
     }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    @-webkit-keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
-    to {
-        opacity: 1;
-    }
-}
 
-.animated__fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .animated__fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
